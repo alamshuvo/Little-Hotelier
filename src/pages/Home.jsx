@@ -11,11 +11,11 @@ const Home = () => {
                 <title>Little Hotelier | Home</title>
             </Helmet>
           
-           <div className=' '>
+           <div>
            <Navbar></Navbar>
            
            </div>
-          <div className='mt-10 z-[0]' >
+          <div className=''>
           <Slider></Slider>
           </div>
           <div >

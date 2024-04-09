@@ -16,9 +16,9 @@ const Slider = () => {
       loop={true}
       autoplay={{ delay: 2000 }}
     >
-      <div className="min-h-screen rounded-lg">
+      <div className="min-h-screen ">
         <SwiperSlide>
-          <div className="slide slide1 flex justify-center items-center flex-col space-y-5">
+          <div className="slide slide1  flex justify-center items-center flex-col space-y-5">
             <h1 className="text-white font-black text-2xl md:text-4xl text-center">
             Courteous treatment will make a customer a walking advertisement.
             </h1>
