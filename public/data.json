@@ -9,7 +9,7 @@
       "area": "5000 sq ft",
       "location": "Beachfront, Miami, Florida",
       "facilities": ["Swimming Pool", "Spa", "Fitness Center", "Beach Access", "Restaurant"],
-      "img": "https://example.com/images/seaside-resort.jpg"
+      "img": "https://i.ibb.co/Lkjf7QP/2110.jpg"
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
       "area": "3000 sq ft",
       "location": "Alpine Village, Colorado",
       "facilities": ["Fireplace", "Ski Storage", "Hiking Trails", "Restaurant"],
-      "img": "https://example.com/images/mountain-lodge.jpg"
+      "img": "https://i.ibb.co/n7X0vnw/10092.jpg"
     },
     {
       "id": 3,
@@ -33,7 +33,7 @@
       "area": "7000 sq ft",
       "location": "City Center, New York",
       "facilities": ["Free WiFi", "Rooftop Bar", "Gym", "Room Service"],
-      "img": "https://example.com/images/boutique-hotel.jpg"
+      "img": "https://i.ibb.co/tXfFNpX/4730-1.jpg"
     },
     {
       "id": 4,
@@ -45,7 +45,7 @@
       "area": "1000 sq ft",
       "location": "Riverfront, Oregon",
       "facilities": ["Deck", "River Access", "BBQ Grill", "Pet Friendly"],
-      "img": "https://example.com/images/riverside-cabin.jpg"
+      "img": "https://i.ibb.co/Kx02HM6/6430.jpg"
     },
     {
       "id": 5,
@@ -57,7 +57,7 @@
       "area": "8000 sq ft",
       "location": "Island Paradise, Maldives",
       "facilities": ["Private Beach", "Infinity Pool", "Outdoor Dining", "Butler Service"],
-      "img": "https://example.com/images/tropical-villa.jpg"
+      "img": "https://i.ibb.co/f8YVnD9/2151302626.jpg"
     },
     {
       "id": 6,
@@ -69,7 +69,7 @@
       "area": "2000 sq ft",
       "location": "Coastal Town, California",
       "facilities": ["Ocean View Rooms", "Shared Kitchen", "Outdoor Patio"],
-      "img": "https://example.com/images/coastal-guesthouse.jpg"
+      "img": "https://i.ibb.co/YdCJTtK/2151302627.jpg"
     },
     {
       "id": 7,
@@ -81,7 +81,7 @@
       "area": "6000 sq ft",
       "location": "Lakefront, Montana",
       "facilities": ["Lake Access", "Spa", "Fine Dining", "Tennis Courts"],
-      "img": "https://example.com/images/lakeside-retreat.jpg"
+      "img": "https://i.ibb.co/QQ15T4C/60153.jpg"
     },
     {
       "id": 8,
@@ -93,7 +93,7 @@
       "area": "1200 sq ft",
       "location": "Mountain Valley, Utah",
       "facilities": ["Firepit", "Mountain Views", "Hiking Trails", "Pet Friendly"],
-      "img": "https://example.com/images/mountain-cabin.jpg"
+      "img": "https://i.ibb.co/gZ5FhD4/2151302700.jpg"
     },
     {
       "id": 9,
@@ -105,6 +105,6 @@
       "area": "1500 sq ft",
       "location": "Downtown, Chicago",
       "facilities": ["Open Floor Plan", "High Ceilings", "City Views", "Fitness Center"],
-      "img": "https://example.com/images/urban-loft.jpg"
+      "img": "https://i.ibb.co/4SHD513/maxim-hopman-erl3g-MLz-Wt0-unsplash.jpg"
     }
   ]
