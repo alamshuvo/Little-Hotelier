@@ -45,6 +45,7 @@ const ViewProperty = () => {
                <p >Area of</p> {details.estate_title} :<p> {details.area}</p> 
                <p>Location of</p> {details.estate_title} :<p> {details.location}</p> 
                <p>$ Price</p> {details.estate_title} :<p> {details.price}</p> 
+               <p>Status</p> {details.estate_title} :<p> {details.status}</p> 
               
           </div>
           </div>
