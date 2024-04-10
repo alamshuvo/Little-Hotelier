@@ -20,7 +20,7 @@ const Estate = ({item}) => {
             </div>).slice(0,2)
          }
         </div>
-        <div className='font-bold text-blue-300 flex justify-center items-center mt-5 font-bold'>
+        <div className='font-bold text-blue-300 flex justify-center items-center mt-5 '>
             <p>Status</p>
             {item.status}
         </div>

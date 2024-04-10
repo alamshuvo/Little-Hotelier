@@ -5,6 +5,8 @@ import ErrorPage from "../pages/ErrorPage";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import ViewProperty from "../pages/ViewProperty";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
             path:"/:id",
             element:<ViewProperty></ViewProperty>,
             loader:()=>fetch("/data.json")
+        },
+        {
+            path:"/login",
+            element:<Login></Login>,
+        },
+        {
+            path:"/register",
+            element:<Register></Register>
         }
 
      ]
