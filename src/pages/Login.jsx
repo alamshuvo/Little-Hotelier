@@ -1,13 +1,18 @@
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../components/authProvider/AuthProvider";
+
+import { FcGoogle } from "react-icons/fc";
 
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const {loginUser}=useContext(AuthContext);
+  const {loginUser,googleRegister}=useContext(AuthContext);
+  const navigate=useNavigate();
+  const location=useLocation();
+  const from =location?.state || "/"
   
 
 
@@ -17,12 +22,22 @@ const Login = () => {
     const password =e.target.password.value;
     console.log(email,password);
     loginUser(email,password)
-    .then((response)=>{console.log(response);})
+    .then((response)=>{
+        if (response.user) {
+            navigate(from);
+        }
+    })
     .catch((error)=>{console.log(error);})
 
   };
-
-
+  const handleGoogleRegister = () => {
+    googleRegister().then((res) => {
+        if (res.user) {
+            navigate(from);
+        }
+    });
+  };
+ 
 
   return (
     <div className="bg-blue-200 z-[100] rounded-lg">
@@ -81,6 +96,26 @@ const Login = () => {
             </div>
           </div>
         </form>
+        <h1 className="text-center text-2xl font-bold ">
+          Register With Another Way{" "}
+        </h1>
+        <div className="flex justify-center items-center gap-5 ">
+          <div>
+            <button
+              onClick={() => handleGoogleRegister()}
+              className="btn bg-blue-200"
+            >
+              {" "}
+              <FcGoogle className="text-3xl" />
+            </button>
+          </div>
+          <div>
+            <button className="btn bg-blue-200">
+              {" "}
+              <FaGithub className="text-3xl" />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

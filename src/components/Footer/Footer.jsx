@@ -4,8 +4,10 @@ import { NavLink } from 'react-router-dom';
 const Footer = () => {
     const navLinks=<>
     <NavLink className={({isActive})=>isActive?'border border-green-500 p-2 hover:bg-green-400 hover:text-black rounded-md ':'text-center font-normal gap-6 md:text-[18px]'} to={"/"}>Home</NavLink>
-    <NavLink className={({isActive})=>isActive?'border border-green-500 p-2 rounded-md hover:bg-green-400 hover:text-black':'text-center font-normal gap-6 md:text-[18px]'} to={"/about"}>About</NavLink>
+   
     <NavLink className={({isActive})=>isActive?'border border-green-500 p-2 rounded-md hover:bg-green-400 hover:text-black':'text-center font-normal gap-6 md:text-[18px]'} to={"/contact"}>Contact Us</NavLink>
+    <NavLink className={({isActive})=>isActive?'border border-green-500 p-2 rounded-md hover:bg-green-400 hover:text-black':'text-center font-normal gap-6 md:text-[18px]'} to={"/update"}>Update Profile</NavLink>
+    <NavLink className={({isActive})=>isActive?'border border-green-500 p-2 rounded-md hover:bg-green-400 hover:text-black':'text-center font-normal gap-6 md:text-[18px]'} to={"/profile"}>User Profile</NavLink>
 </>
     return (
         <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">

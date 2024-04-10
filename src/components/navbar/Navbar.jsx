@@ -1,6 +1,14 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../authProvider/AuthProvider";
 
 const Navbar = () => {
+  const { user, signOutproile } = useContext(AuthContext);
+
+  // const handleSignOut=()=>{
+  //   signOut();
+  // }
+
   const navLinks = (
     <>
       <li>
@@ -15,18 +23,7 @@ const Navbar = () => {
           Home
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? "border border-green-500 p-2 rounded-md hover:bg-green-400 hover:text-black"
-              : "text-center font-normal gap-6 text-[18px]"
-          }
-          to={"/about"}
-        >
-          About
-        </NavLink>
-      </li>
+
       <li>
         <NavLink
           className={({ isActive }) =>
@@ -37,6 +34,30 @@ const Navbar = () => {
           to={"/contact"}
         >
           Contact Us
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "border border-green-500 p-2 rounded-md hover:bg-green-400 hover:text-black"
+              : "text-center font-normal gap-6 text-[18px]"
+          }
+          to={"/update"}
+        >
+          Update Profile
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "border border-green-500 p-2 rounded-md hover:bg-green-400 hover:text-black"
+              : "text-center font-normal gap-6 text-[18px]"
+          }
+          to={"/profile"}
+        >
+          User Profile
         </NavLink>
       </li>
     </>
@@ -66,19 +87,28 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3  z-[100] p-5 space-y-4 shadow bg-base-100 rounded-box w-52"
           >
             {navLinks}
-            <div className="flex  ">
-              <Link to={"/login"}>
-                {" "}
-                <button className="btn mr-3 bg-green-400 text-white hover:outline-1 ">
-                  Login
-                </button>
-              </Link>
-              <Link to={"/register"}>
-                <button className="btn hover:bg-blue-300 hover:text-white">
-                  Register
-                </button>
-              </Link>
-            </div>
+            {user ? (
+              <div className="md:flex  ">
+                <Link>
+                  {" "}
+                  <button
+                    onClick={signOutproile}
+                    className="btn mr-3 bg-green-400 text-white hover:outline-1 "
+                  >
+                    SignOut
+                  </button>
+                </Link>
+              </div>
+            ) : (
+              <div className="md:flex  ">
+                <Link to={"/login"}>
+                  {" "}
+                  <button className="btn  bg-green-400 text-white hover:outline-1 ">
+                    Login
+                  </button>
+                </Link>
+              </div>
+            )}
           </ul>
         </div>
         <Link to={"/"}>
@@ -95,31 +125,28 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="md:flex  navbar-end">
-        <div className="md:flex hidden ">
-          <Link to={"/login"}>
-            {" "}
-            <button className="btn mr-3 bg-green-400 text-white hover:outline-1 ">
-              Login
-            </button>
-          </Link>
-          <Link to={"/register"}>
-            <button className="btn hover:bg-blue-300 hover:text-white">
-              Register
-            </button>
-          </Link>
-        </div>
-        <div
-          tabIndex={0}
-          role="button"
-          className="btn btn-ghost btn-circle avatar"
-        >
-          <div className="w-10 rounded-full">
-            <img
-              alt="Tailwind CSS Navbar component"
-              src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-            />
+        {user ? (
+          <div className="md:flex ">
+            <Link>
+              {" "}
+              <button
+                onClick={signOutproile}
+                className="btn mr-3 bg-green-400 text-white hover:outline-1 "
+              >
+                SignOut
+              </button>
+            </Link>
           </div>
-        </div>
+        ) : (
+          <div className="md:flex  ">
+            <Link to={"/login"}>
+              {" "}
+              <button className="btn mr-3 bg-green-400 text-white hover:outline-1 ">
+                Login
+              </button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

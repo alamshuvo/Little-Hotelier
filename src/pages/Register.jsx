@@ -1,24 +1,37 @@
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../components/authProvider/AuthProvider";
-
+import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const {registerUser}=useContext(AuthContext)
+  const { registerUser } = useContext(AuthContext);
+  const navigate=useNavigate();
+  const location=useLocation();
+  const from =location?.state || "/";
+
+
   const handleRegesterUser = (e) => {
     e.preventDefault();
-    const name=e.target.name.value;
-    const email=e.target.email.value;
-    const password=e.target.password.value;
-    registerUser(email,password)
-    .then((response)=>{console.log(response.user)
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
 
-    })
-    .catch((error)=>{console.log(error)})
+  
+
+    registerUser(email, password)
+      .then((response) => {
+        if (response.user) {
+          navigate(from);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
+  
   return (
     <div className="bg-blue-200 z-[100] rounded-lg">
       <Helmet>
@@ -91,6 +104,7 @@ const Register = () => {
             </div>
           </div>
         </form>
+       
       </div>
     </div>
   );
