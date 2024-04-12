@@ -3,11 +3,13 @@ import { Helmet } from "react-helmet-async";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../components/authProvider/AuthProvider";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { registerUser,updateProfileUser } = useContext(AuthContext);
+  const { registerUser,updateProfileUser,error } = useContext(AuthContext);
   const navigate=useNavigate();
   const location=useLocation();
   const from =location?.state || "/";
@@ -20,13 +22,26 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-   
-    // create user and update profile 
+    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z]).+$/;
 
+    // create user and update profile 
+    if (password.length<6) {
+      return toast.error("password must be atleast 6 char")
+    }
+    if (!passwordPattern.test(password)) {
+      return toast.error("password must have one lowercase and one uppercase letter atleast")
+    }
     registerUser(email, password)
+    
       .then((response) => {
+       
+        if (!error) {
+          toast.success("User Register  sucessfully ")
+          
+        }
         updateProfileUser(name,photo)
         .then(()=>{
+         
             navigate(from);
           
         })
@@ -34,7 +49,10 @@ const Register = () => {
         console.log(response);
       })
       .catch((error) => {
-        console.log(error);
+        if (error) {
+          toast.error("Something went Wrong")
+          
+        }
       });
   };
   

@@ -5,11 +5,14 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../components/authProvider/AuthProvider";
 
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const {loginUser,googleRegister}=useContext(AuthContext);
+  const {loginUser,googleRegister, error}=useContext(AuthContext);
   const navigate=useNavigate();
   const location=useLocation();
   const from =location?.state || "/"
@@ -23,17 +26,30 @@ const Login = () => {
     console.log(email,password);
     loginUser(email,password)
     .then((response)=>{
+      if (!error) {
+        toast.success("User Login sucessfully By Email And Password");
+        
+      }
         if (response.user) {
             navigate(from);
         }
         // console.log(response,loginUser);
     })
-    .catch((error)=>{console.log(error);})
+    .catch((error)=>{
+      if (error) {
+        toast.error(" Email And Password May Be Wrong")
+      }
+    })
 
   };
   const handleGoogleRegister = () => {
     googleRegister().then((res) => {
+      if (!error) {
+        toast.success("User Login sucessfully ")
+        
+      }
         if (res.user) {
+         
             navigate(from);
         }
     });

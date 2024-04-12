@@ -1,14 +1,20 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
-  const { user, signOutproile,loading } = useContext(AuthContext);
+  const { user, signOutproile,loading,error } = useContext(AuthContext);
   console.log(user);
 
-  // const handleSignOut=()=>{
-  //   signOut();
-  // }
+  const handleSignOut=()=>{
+    // if (!error) {
+    //   toast.success("User logOut Sucessfully");
+      
+    // }
+    signOutproile()
+  }
 
   const navLinks = (
     <>
@@ -94,10 +100,11 @@ const Navbar = () => {
                 <Link>
                   {" "}
                   <button
-                    onClick={signOutproile}
+                    onClick={handleSignOut}
+                    
                     className="btn mr-3 bg-green-400 text-white hover:outline-1 "
                   >
-                    SignOut
+                      LogOut
                   </button>
                 </Link>
               </div>
@@ -128,13 +135,13 @@ const Navbar = () => {
       </div>
       <div className="md:flex  navbar-end">
         {user ? (
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center gap-2">
             <div
           tabIndex={0}
           role="button"
-          className="btn btn-ghost btn-circle avatar"
+          className="btn btn-ghost btn-circle avatar tooltip tooltip-left" data-tip={user?.displayName||"User Name"}
         >
-          <div className="w-10 rounded-full">
+          <div className="w-12 rounded-full ">
             <img
             className="w-full"
               alt="user"
@@ -146,10 +153,10 @@ const Navbar = () => {
             <Link>
               {" "}
               <button
-                onClick={signOutproile}
+                onClick={handleSignOut}
                 className="btn mr-3 bg-green-400 text-white hover:outline-1 "
               >
-                SignOut
+                LogOut
               </button>
             </Link>
           </div>

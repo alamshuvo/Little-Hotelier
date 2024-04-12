@@ -10,10 +10,12 @@ const AuthProvider = ({children}) => {
     const provider = new GoogleAuthProvider();
     const [user,setUser]=useState(null);
     const [loading,setLoading]=useState(true);
-    console.log(loading);
+    const [error,setError]=useState(true);
+    console.log(loading,error);
     // create user 
     const registerUser=(email,password)=>{
         setLoading(true);
+        setError(true)
       return createUserWithEmailAndPassword(auth, email, password);
     }
 
@@ -34,12 +36,14 @@ const updateProfileUser=(name,img)=>{
     // signIn user 
 
      const loginUser=(email,password)=>{
-        setLoading(true)
+        setLoading(true);
+        setError(true)
        return signInWithEmailAndPassword(auth, email, password)
     }
 
 //  google login 
  const googleRegister=()=>{
+    setError(true)
     setLoading(true)
 
     return  signInWithPopup(auth,provider)
@@ -49,7 +53,7 @@ const updateProfileUser=(name,img)=>{
 //  signout
 const signOutproile=()=>{
     setUser(null)
-   
+    setError(true)
 
      signOut(auth)
    
@@ -63,7 +67,8 @@ const signOutproile=()=>{
    useEffect(()=>{
  const unSubcribe=   onAuthStateChanged(auth,curentUser=>{
         setUser(curentUser);
-        setLoading(false)
+        setLoading(false);
+        setError(false)
     })
     return ()=>
     {
@@ -80,6 +85,7 @@ const signOutproile=()=>{
         signOutproile,
         loading,
         updateProfileUser,
+        error,
     }
     return (
         <div>
