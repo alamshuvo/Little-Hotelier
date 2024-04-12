@@ -2,19 +2,19 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
 import { toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = () => {
-  const { user, signOutproile,loading,error } = useContext(AuthContext);
+  const { user, signOutproile, loading } = useContext(AuthContext);
   console.log(user);
 
-  const handleSignOut=()=>{
+  const handleSignOut = () => {
     // if (!error) {
     //   toast.success("User logOut Sucessfully");
-      
+
     // }
-    signOutproile()
-  }
+    signOutproile();
+  };
 
   const navLinks = (
     <>
@@ -31,18 +31,20 @@ const Navbar = () => {
         </NavLink>
       </li>
 
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? "border border-green-500 p-2 rounded-md hover:bg-green-400 hover:text-black"
-              : "text-center font-normal gap-6 text-[18px]"
-          }
-          to={"/contact"}
-        >
-          Contact Us
-        </NavLink>
-      </li>
+    {
+      user?  <li>
+      <NavLink
+        className={({ isActive }) =>
+          isActive
+            ? "border border-green-500 p-2 rounded-md hover:bg-green-400 hover:text-black"
+            : "text-center font-normal gap-6 text-[18px]"
+        }
+        to={"/contact"}
+      >
+        Contact Us
+      </NavLink>
+    </li>:<div></div>
+    }
       <li>
         <NavLink
           className={({ isActive }) =>
@@ -55,22 +57,29 @@ const Navbar = () => {
           Update Profile
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? "border border-green-500 p-2 rounded-md hover:bg-green-400 hover:text-black"
-              : "text-center font-normal gap-6 text-[18px]"
-          }
-          to={"/profile"}
-        >
-          User Profile
-        </NavLink>
-      </li>
+      {user ? (
+        <li>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "border border-green-500 p-2 rounded-md hover:bg-green-400 hover:text-black"
+                : "text-center font-normal gap-6 text-[18px]"
+            }
+            to={"/profile"}
+          >
+            User Profile
+          </NavLink>
+        </li>
+      ) : (
+        <div></div>
+      )}
     </>
   );
-  return (
-    loading?<div className="flex justify-center items-center"><span className="loading loading-infinity loading-lg"></span></div>:
+  return loading ? (
+    <div className="flex justify-center items-center">
+      <span className="loading loading-infinity loading-lg"></span>
+    </div>
+  ) : (
     <div className="navbar bg-base-100 ">
       <div className="navbar-start">
         <div className="dropdown ">
@@ -101,10 +110,9 @@ const Navbar = () => {
                   {" "}
                   <button
                     onClick={handleSignOut}
-                    
                     className="btn mr-3 bg-green-400 text-white hover:outline-1 "
                   >
-                      LogOut
+                    LogOut
                   </button>
                 </Link>
               </div>
@@ -135,33 +143,36 @@ const Navbar = () => {
       </div>
       <div className="md:flex  navbar-end">
         {user ? (
-        <div className="flex justify-center items-center gap-2">
+          <div className="flex justify-center items-center gap-2">
             <div
-          tabIndex={0}
-          role="button"
-          className="btn btn-ghost btn-circle avatar tooltip tooltip-left" data-tip={user?.displayName||"User Name"}
-        >
-          <div className="w-12 rounded-full ">
-            <img
-            className="w-full"
-              alt="user"
-              src={user?.photoURL ||"https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"}
-            />
-          </div>
-        </div>
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar tooltip tooltip-left"
+              data-tip={user?.displayName || "User Name"}
+            >
+              <div className="w-12 rounded-full ">
+                <img
+                  className="w-full"
+                  alt="user"
+                  src={
+                    user?.photoURL ||
+                    "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  }
+                />
+              </div>
+            </div>
             <div className="md:flex ">
-            <Link>
-              {" "}
-              <button
-                onClick={handleSignOut}
-                className="btn mr-3 bg-green-400 text-white hover:outline-1 "
-              >
-                LogOut
-              </button>
-            </Link>
+              <Link>
+                {" "}
+                <button
+                  onClick={handleSignOut}
+                  className="btn mr-3 bg-green-400 text-white hover:outline-1 "
+                >
+                  LogOut
+                </button>
+              </Link>
+            </div>
           </div>
-        
-        </div>
         ) : (
           <div className="md:flex  ">
             <Link to={"/login"}>

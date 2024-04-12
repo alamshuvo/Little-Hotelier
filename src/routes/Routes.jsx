@@ -25,7 +25,9 @@ const router = createBrowserRouter([
        
         {
             path:"/contact",
-            element:<Contact></Contact>
+            element:<PrivateRoutes>
+                <Contact></Contact>
+            </PrivateRoutes>
         },
         {
             path:"/:id",
@@ -48,7 +50,9 @@ const router = createBrowserRouter([
         },
         {
             path:"/profile",
-            element:<UserProfile></UserProfile>
+            element:<PrivateRoutes>
+                <UserProfile></UserProfile>
+            </PrivateRoutes>
         }
 
      ]
