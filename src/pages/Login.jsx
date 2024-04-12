@@ -26,6 +26,7 @@ const Login = () => {
         if (response.user) {
             navigate(from);
         }
+        // console.log(response,loginUser);
     })
     .catch((error)=>{console.log(error);})
 
@@ -45,12 +46,12 @@ const Login = () => {
         <title>Little Hotelier | Login</title>
       </Helmet>
 
-      <div>
+      <div className="bg-green-200">
         <form
           onSubmit={handleLoginUser}
           className="flex flex-col justify-center items-center min-h-screen border z-[200]"
         >
-          <div className="bg-green-200 md:w-2/4 p-2 md:p-5 rounded-lg">
+          <div className=" md:w-2/4 p-2 md:p-5 rounded-lg">
             <div className="mb-10">
               <h1 className="text-center font-black md:text-4xl">
                 Login Now

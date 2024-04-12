@@ -1,13 +1,13 @@
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../components/authProvider/AuthProvider";
-import { FcGoogle } from "react-icons/fc";
+
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { registerUser } = useContext(AuthContext);
+  const { registerUser,updateProfileUser } = useContext(AuthContext);
   const navigate=useNavigate();
   const location=useLocation();
   const from =location?.state || "/";
@@ -16,16 +16,22 @@ const Register = () => {
   const handleRegesterUser = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
+    const photo=e.target.photo.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-  
+   
+    // create user and update profile 
 
     registerUser(email, password)
       .then((response) => {
-        if (response.user) {
-          navigate(from);
-        }
+        updateProfileUser(name,photo)
+        .then(()=>{
+            navigate(from);
+          
+        })
+        
+        console.log(response);
       })
       .catch((error) => {
         console.log(error);
@@ -56,6 +62,15 @@ const Register = () => {
                 name="name"
                 required
                 placeholder="Type Your Name"
+              />
+            </div>
+            <div>
+              <input
+                className="border rounded-lg w-full p-3 mt-3" 
+                type="text"
+                name="photo"
+                required
+                placeholder="Photo URL "
               />
             </div>
             <div>

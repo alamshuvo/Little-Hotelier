@@ -3,7 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
 
 const Navbar = () => {
-  const { user, signOutproile } = useContext(AuthContext);
+  const { user, signOutproile,loading } = useContext(AuthContext);
+  console.log(user);
 
   // const handleSignOut=()=>{
   //   signOut();
@@ -63,6 +64,7 @@ const Navbar = () => {
     </>
   );
   return (
+    loading?<div className="flex justify-center items-center"><span className="loading loading-infinity loading-lg"></span></div>:
     <div className="navbar bg-base-100 ">
       <div className="navbar-start">
         <div className="dropdown ">
@@ -126,7 +128,21 @@ const Navbar = () => {
       </div>
       <div className="md:flex  navbar-end">
         {user ? (
-          <div className="md:flex ">
+        <div className="flex justify-center items-center">
+            <div
+          tabIndex={0}
+          role="button"
+          className="btn btn-ghost btn-circle avatar"
+        >
+          <div className="w-10 rounded-full">
+            <img
+            className="w-full"
+              alt="user"
+              src={user?.photoURL ||"https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"}
+            />
+          </div>
+        </div>
+            <div className="md:flex ">
             <Link>
               {" "}
               <button
@@ -137,6 +153,8 @@ const Navbar = () => {
               </button>
             </Link>
           </div>
+        
+        </div>
         ) : (
           <div className="md:flex  ">
             <Link to={"/login"}>
