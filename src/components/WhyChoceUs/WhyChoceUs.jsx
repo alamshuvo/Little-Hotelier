@@ -52,10 +52,10 @@ const WhyChoceUs = () => {
         <div className="card w-full bg-base-100 shadow-xl hover:bg-blue-400 hover:text-white">
           <div className="card-body">
             <h2 className="card-title animate__animated animate__swing">
-              Private Security
+              Smart Homes
             </h2>
             <p>
-            Stay protected with our top-notch private security services. Highly trained personnel equipped with cutting-edge technology ensure your safety and peace of mind around the clock. Your safety is our priority
+            Experience the future of living with our smart homes. Control lighting, temperature, security, and more with ease from your smartphone. Enjoy convenience, comfort, and energy efficiency at your fingertips.
             </p>
             <div className="card-actions ">
               <Link to={"/contact"}>
@@ -67,12 +67,10 @@ const WhyChoceUs = () => {
         <div className="card w-full bg-base-100 shadow-xl hover:bg-blue-400 hover:text-white">
           <div className="card-body">
             <h2 className="card-title animate__animated animate__swing">
-              Parking Space
+              King Size Bed
             </h2>
-            <p>
-              Compact, secure parking space available for rent in a prime
-              downtown location. Convenient access to public transportation and
-              nearby amenities. Reserve your spot today for hassle-free parking
+            <p>Indulge in royal comfort with our king-size bed. Ample space for luxurious lounging and peaceful slumber. Elevate your bedroom experience with plushness fit for royalty.
+          
             </p>
             <div className="card-actions ">
               <Link to={"/contact"}>
@@ -84,12 +82,10 @@ const WhyChoceUs = () => {
         <div className="card w-full bg-base-100 shadow-xl hover:bg-blue-400 hover:text-white">
           <div className="card-body">
             <h2 className="card-title animate__animated animate__swing">
-              Parking Space
+              Kid's Playland
             </h2>
             <p>
-              Compact, secure parking space available for rent in a prime
-              downtown location. Convenient access to public transportation and
-              nearby amenities. Reserve your spot today for hassle-free parking
+            Let imaginations soar at our vibrant kids' playland. Packed with interactive games, slides, and creative zones, it's a haven for fun and laughter. Unleash endless adventures for your little ones today!
             </p>
             <div className="card-actions ">
               <Link to={"/contact"}>
@@ -101,12 +97,10 @@ const WhyChoceUs = () => {
         <div className="card w-full bg-base-100 shadow-xl hover:bg-blue-400 hover:text-white">
           <div className="card-body">
             <h2 className="card-title animate__animated animate__swing">
-              Parking Space
+              Medical Center
             </h2>
             <p>
-              Compact, secure parking space available for rent in a prime
-              downtown location. Convenient access to public transportation and
-              nearby amenities. Reserve your spot today for hassle-free parking
+            Discover exceptional care at our state-of-the-art medical center. Expert staff, advanced technology, and compassionate service ensure optimal health and well-being for every patient. Your health is our priority.
             </p>
             <div className="card-actions ">
               <Link to={"/contact"}>

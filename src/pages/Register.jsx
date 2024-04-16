@@ -44,8 +44,11 @@ const Register = () => {
         }
         updateProfileUser(name,photo)
         .then(()=>{
-         
+          setTimeout(() => {
+            window.location.reload()
+          }, 1000);
             navigate(from);
+           
           
         })
         
