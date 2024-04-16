@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Pagination } from "swiper/modules";
 import "./Slider.css";
+import 'animate.css';
 
 const Slider = () => {
   return (
@@ -18,15 +19,15 @@ const Slider = () => {
     >
       <div className="min-h-screen ">
         <SwiperSlide>
-          <div className="slide slide1  flex justify-center items-center flex-col space-y-5">
-            <h1 className="text-white font-black text-2xl md:text-4xl text-center">
+          <div className="slide slide1  flex justify-center items-center flex-col space-y-5" >
+            <h1 className="text-white font-black text-2xl md:text-4xl text-center animate__animated animate__heartBeat">
             Courteous treatment will make a customer a walking advertisement.
             </h1>
-            <p className="text-white font-black text-xl md:text-2xl text-center">
+            <p className="text-white font-black text-xl md:text-2xl text-center animate__animated animate__heartBeat">
               You are our beloved customer ,You can chooce our projects.
             </p>
             <label className="input input-bordered flex items-center gap-2 mt-5">
-              <input type="text" className="grow" placeholder="Search" />
+              <input type="text" className="grow animate__animated animate__tada" placeholder="Search" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -44,14 +45,14 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
         <div className="slide slide2 flex justify-center items-center flex-col space-y-5">
-            <h1 className="text-white font-black text-2xl md:text-4xl text-center">
+            <h1 className="text-white font-black text-2xl md:text-4xl text-center animate__animated animate__heartBeat">
             “Customers may forget what you said but they will never forget how you made them feel”
             </h1>
-            <p className="text-white font-black text-xl md:text-2xl text-center">
+            <p className="text-white font-black text-xl md:text-2xl text-center animate__animated animate__heartBeat">
               You are our beloved customer ,You can chooce our projects.
             </p>
             <label className="input input-bordered flex items-center gap-2 mt-5">
-              <input type="text" className="grow" placeholder="Search" />
+              <input type="text" className="grow animate__animated animate__tada" placeholder="Search" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -69,14 +70,14 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
         <div className="slide slide3 flex justify-center items-center flex-col space-y-5">
-            <h1 className="text-white font-black text-2xl md:text-4xl text-center">
+            <h1 className="text-white font-black text-2xl md:text-4xl text-center animate__animated animate__heartBeat">
             There is no hospitality like understanding.
             </h1>
-            <p className="text-white font-black text-xl md:text-2xl text-center">
+            <p className="text-white font-black text-xl md:text-2xl text-center animate__animated animate__heartBeat">
               You are our beloved customer ,You can chooce our projects.
             </p>
             <label className="input input-bordered flex items-center gap-2 mt-5">
-              <input type="text" className="grow" placeholder="Search" />
+              <input type="text" className="grow animate__animated animate__tada" placeholder="Search" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -94,14 +95,14 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
         <div className="slide slide4 flex justify-center items-center flex-col space-y-5">
-            <h1 className="text-white font-black text-2xl md:text-4xl text-center">
+            <h1 className="text-white font-black text-2xl md:text-4xl text-center animate__animated animate__heartBeat">
             Hospitality is about trying to support multiple functions in one space.
             </h1>
-            <p className="text-white font-black text-xl md:text-2xl text-center">
+            <p className="text-white font-black text-xl md:text-2xl text-center animate__animated animate__heartBeat">
               You are our beloved customer ,You can chooce our projects.
             </p>
             <label className="input input-bordered flex items-center gap-2 mt-5">
-              <input type="text" className="grow" placeholder="Search" />
+              <input type="text" className="grow animate__animated animate__tada" placeholder="Search" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -119,14 +120,14 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
         <div className="slide slide5 flex justify-center items-center flex-col space-y-5">
-            <h1 className="text-white font-black text-2xl md:text-4xl text-center">
+            <h1 className="text-white font-black text-2xl md:text-4xl text-center animate__animated animate__heartBeat">
               Your Satisfaction Our Desiar
             </h1>
-            <p className="text-white font-black text-xl md:text-2xl text-center">
+            <p className="text-white font-black text-xl md:text-2xl text-center animate__animated animate__heartBeat">
               You are our beloved customer ,You can chooce our projects.
             </p>
             <label className="input input-bordered flex items-center gap-2 mt-5">
-              <input type="text" className="grow" placeholder="Search" />
+              <input type="text" className="grow animate__animated animate__tada" placeholder="Search" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -144,14 +145,14 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
         <div className="slide slide6 flex justify-center items-center flex-col space-y-5">
-            <h1 className="text-white font-black text-2xl md:text-4xl text-center">
+            <h1 className="text-white font-black text-2xl md:text-4xl text-center animate__animated animate__heartBeat">
               Your Satisfaction Our Desiar
             </h1>
-            <p className="text-white font-black text-xl md:text-2xl text-center">
+            <p className="text-white font-black text-xl md:text-2xl text-center animate__animated animate__heartBeat">
               You are our beloved customer ,You can chooce our projects.
             </p>
             <label className="input input-bordered flex items-center gap-2 mt-5">
-              <input type="text" className="grow" placeholder="Search" />
+              <input type="text" className="grow animate__animated animate__tada" placeholder="Search" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"

@@ -4,7 +4,7 @@ import Estate from '../Estate/Estate';
 
 const Estates = () => {
     const data =useLoaderData();
-    console.log(data);
+    // console.log(data);
     return (
         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4'>
             {

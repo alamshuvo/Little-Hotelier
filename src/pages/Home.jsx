@@ -18,10 +18,10 @@ const Home = () => {
           <div className=''>
           <Slider></Slider>
           </div>
-          <div >
+          <div className='mt-10' >
             <EstateTitle></EstateTitle>
           </div>
-          <div>
+          <div className='mt-10'>
             <Estates></Estates>
           </div>
         </div>
