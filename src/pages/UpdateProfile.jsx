@@ -1,14 +1,16 @@
 
-import { useContext } from "react";
+// import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../components/authProvider/AuthProvider";
 import 'react-toastify/dist/ReactToastify.css';
 import 'animate.css';
 import { useLocation, useNavigate } from "react-router-dom";
+import { useContext } from "react";
 
 
 const UpdateProfile = () => {
     // const {updateProfileUser}=useContext(AuthContext);
+    // const [a,setA]=useState(null);
     const { updateTotalProfile} = useContext(AuthContext);
     const navigate=useNavigate()
     const location=useLocation()
@@ -23,7 +25,13 @@ const UpdateProfile = () => {
         .then(() => {
             // Profile updated!
             // console.log("profile updated finally");
+          // if (res.user) {
+             
             navigate(from)
+            window.location.reload()
+            // console.log(res);
+          
+           
             console.log(name,photo);
             // ...
           }).catch((error) => {

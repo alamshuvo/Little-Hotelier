@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Slider from '../components/slider/Slider';
 import Estates from '../components/Estates/Estates';
 import EstateTitle from '../components/EstateTitle/EstateTitle';
+import WhyChoceUs from '../components/WhyChoceUs/WhyChoceUs';
 
 const Home = () => {
     return (
@@ -23,6 +24,9 @@ const Home = () => {
           </div>
           <div className='mt-10'>
             <Estates></Estates>
+          </div>
+          <div className='mt-10 space-y-10'>
+            <WhyChoceUs></WhyChoceUs>
           </div>
         </div>
     );
