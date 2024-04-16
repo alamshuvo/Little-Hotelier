@@ -13,12 +13,12 @@ const UserProfile = () => {
       </Helmet>
       <p className="md:text-3xl text-xl font-black:">User Profile</p>
       <h1 className="mb-10 md:text-3xl text-xl font-black"> Name: {user?.displayName || "user"}</h1>
-      <div className="card w-96 glass ">
+      <div className="card md:w-96 w-full glass ">
         <figure>
-          <img
+          <img referrerPolicy="no-referrer"
           className="w-full"
             src={user?.photoURL || <p>user</p>}
-            alt="car!"
+            alt={user?.displayName}
           />
         </figure>
         <div className="card-body">

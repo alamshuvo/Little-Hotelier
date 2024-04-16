@@ -27,11 +27,19 @@ const updateProfileUser=(name,img)=>{
         photoURL: img,
       }).then(() => {
         // Profile updated!
+        console.log("profile updated");
         // ...
       }).catch((error) => {
         // An error occurred
         // ...
       });
+}
+// update profile 
+const updateTotalProfile=(name,img)=>{
+    return  updateProfile(auth.currentUser, {
+        displayName: name, 
+        photoURL: img,
+      })
 }
     // signIn user 
 
@@ -86,6 +94,7 @@ const signOutproile=()=>{
         loading,
         updateProfileUser,
         error,
+        updateTotalProfile
     }
     return (
         <div>
