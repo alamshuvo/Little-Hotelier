@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../components/authProvider/AuthProvider";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import 'animate.css';
 
 const UpdateProfile = () => {
     // const {updateProfileUser}=useContext(AuthContext);
@@ -33,7 +34,7 @@ const UpdateProfile = () => {
         <title>Little Hotelier | Update Profile</title>
       </Helmet>
       <div>
-        <h1 className="text-3xl font-black">Update Your  Profile</h1>
+        <h1 className="text-3xl font-black animate__animated animate__bounce">Update Your  Profile</h1>
       </div>
       <div className=" md:w-2/4  ">
         <form onSubmit={handleUpdateProfile}>

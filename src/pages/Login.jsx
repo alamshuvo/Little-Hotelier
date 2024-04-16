@@ -7,6 +7,7 @@ import { AuthContext } from "../components/authProvider/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import 'animate.css';
 
 
 
@@ -82,7 +83,7 @@ const Login = () => {
         >
           <div className=" md:w-2/4 p-2 md:p-5 rounded-lg">
             <div className="mb-10">
-              <h1 className="text-center font-black md:text-4xl">
+              <h1 className="text-center font-black md:text-4xl animate__animated animate__bounce">
                 Login Now
               </h1>
             </div>

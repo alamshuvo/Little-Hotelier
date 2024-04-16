@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../components/authProvider/AuthProvider";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import 'animate.css';
 
 
 const Register = () => {
@@ -69,7 +70,7 @@ const Register = () => {
         >
           <div className="bg-green-200 md:w-2/4 p-2 md:p-5 rounded-lg">
             <div className="mb-10">
-              <h1 className="text-center font-black md:text-4xl">
+              <h1 className="text-center font-black md:text-4xl animate__animated animate__bounce">
                 Register Now
               </h1>
             </div>

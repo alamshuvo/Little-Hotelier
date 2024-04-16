@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
+
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../components/authProvider/AuthProvider";
 import { Link } from "react-router-dom";
+import 'animate.css';
 
 const UserProfile = () => {
   const { user } = useContext(AuthContext);
@@ -11,7 +12,7 @@ const UserProfile = () => {
       <Helmet>
         <title>Little Hotelier | User Profile</title>
       </Helmet>
-      <p className="md:text-3xl text-xl font-black:">User Profile</p>
+      <p className="md:text-3xl text-xl font-black animate__animated animate__bounce">User Profile</p>
       <h1 className="mb-10 md:text-3xl text-xl font-black"> Name: {user?.displayName || "user"}</h1>
       <div className="card md:w-96 w-full glass ">
         <figure>
