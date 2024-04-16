@@ -63,7 +63,9 @@ const Register = () => {
         <title>Little Hotelier | Register</title>
       </Helmet>
 
-      <div>
+      <div data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
         <form
           onSubmit={handleRegesterUser}
           className="flex flex-col justify-center items-center min-h-screen border z-[200]"

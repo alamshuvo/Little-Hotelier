@@ -6,7 +6,10 @@ const Estate = ({ item }) => {
   return (
     <div >
       <div className="card p-2 md:p-5 bg-base-100 shadow-xl  cursor-pointer ">
-        <div >
+        <div data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"
+      >
           <figure>
             <img
               src={item.img}

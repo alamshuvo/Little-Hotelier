@@ -8,6 +8,10 @@ import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import 'animate.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 
 
@@ -76,7 +80,9 @@ const Login = () => {
         <title>Little Hotelier | Login</title>
       </Helmet>
 
-      <div className="bg-green-200">
+      <div className="bg-green-200" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
         <form
           onSubmit={handleLoginUser}
           className="flex flex-col justify-center items-center min-h-screen border z-[200]"
@@ -89,8 +95,9 @@ const Login = () => {
             </div>
           
             <div>
-              <input
-                className="border rounded-lg w-full p-3 mt-3"
+              <input 
+               
+                className="border rounded-lg w-full p-3 mt-3  animate__animated animate__flipInX"
                 type="email"
                 name="email"
                 required
@@ -100,7 +107,7 @@ const Login = () => {
             
             <div className="flex justify-end relative">
               <input
-                className="border rounded-lg w-full p-3 mt-3"
+                className="border rounded-lg w-full p-3 mt-3 animate__animated animate__flipInX"
                 type={showPassword ? "text" : "password"}
                 name="password"
                 required
@@ -127,7 +134,7 @@ const Login = () => {
             </div>
           </div>
         </form>
-        <h1 className="text-center text-2xl font-bold ">
+        <h1 className="text-center text-2xl font-bold animate__animated animate__flipInX">
           Register With Another Way{" "}
         </h1>
         <div className="flex justify-center items-center gap-5 ">
