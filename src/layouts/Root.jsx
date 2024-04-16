@@ -6,7 +6,9 @@ import Navbar from '../components/navbar/Navbar';
 const Root = () => {
     return (
         <div className='container mx-auto font-lato'>
-            <Navbar></Navbar>
+          <div>
+          <Navbar ></Navbar>
+          </div>
             <Outlet></Outlet>
             <div className='mt-10'>
             <Footer></Footer>

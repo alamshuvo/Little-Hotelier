@@ -80,8 +80,8 @@ const Navbar = () => {
       <span className="loading loading-infinity loading-lg"></span>
     </div>
   ) : (
-    <div className="navbar bg-base-100 ">
-      <div className="navbar-start">
+    <div className="navbar bg-blue-300  rounded-lg sticky top-0 ">
+      <div className="navbar-start ">
         <div className="dropdown ">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -152,6 +152,7 @@ const Navbar = () => {
             >
               <div className="w-12 rounded-full ">
                 <img
+                referrerPolicy="no-referrer"
                   className="w-full"
                   alt="user"
                   src={
