@@ -21,7 +21,7 @@ const MeetOurAgents = () => {
               </p>
             </div>
             <div className="grid w-full grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4 cursor-pointer ">
-              <div className="space-y-4">
+              <div className="space-y-4 "data-aos="fade-down">
                 <img
                   alt=""
                   className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm bg-gray-500"
@@ -33,7 +33,7 @@ const MeetOurAgents = () => {
                  
                 </div>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-4" data-aos="fade-up">
                 <img
                   alt=""
                   className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm bg-gray-500"
@@ -45,7 +45,7 @@ const MeetOurAgents = () => {
                   
                 </div>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-4 "data-aos="fade-down">
                 <img
                   alt=""
                   className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm bg-gray-500"
@@ -57,7 +57,7 @@ const MeetOurAgents = () => {
                   
                 </div>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-4" data-aos="fade-up">
                 <img
                   alt=""
                   className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm bg-gray-500"
@@ -69,7 +69,7 @@ const MeetOurAgents = () => {
                   
                 </div>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-4" data-aos="fade-down">
                 <img
                   alt=""
                   className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm bg-gray-500"
@@ -81,7 +81,7 @@ const MeetOurAgents = () => {
                  
                 </div>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-4" data-aos="fade-up">
                 <img
                   alt=""
                   className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm bg-gray-500"
@@ -93,7 +93,7 @@ const MeetOurAgents = () => {
                   
                 </div>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-4" data-aos="fade-down">
                 <img
                   alt=""
                   className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm bg-gray-500"
@@ -105,7 +105,7 @@ const MeetOurAgents = () => {
                  
                 </div>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-4" data-aos="fade-up">
                 <img
                   alt=""
                   className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm bg-gray-500"
