@@ -1,3 +1,4 @@
+
 .slide{
     height: 90vh;
     display:flex;
@@ -9,28 +10,28 @@
     background-size: cover;
 }
 .slide1{
-    background-image: url('../src/assets/img/a.jpg');
+    background-image: url("/img/a.jpg");
     border-radius: 20px;
     
 }
 .slide2{
-    background-image: url('../src/assets/img/b.jpg');
+    background-image: url('/img/b.jpg');
     border-radius: 20px;
 }
 .slide3{
-    background-image: url('../src/assets/img/c.jpg');
+    background-image: url('/img/c.jpg');
     border-radius: 20px;
 }
 .slide4{
-    background-image: url('../src/assets/img/d.jpg');
+    background-image: url('/img/d.jpg');
     border-radius: 20px;
 }
 .slide5{
-    background-image: url('../src/assets/img/e.jpg');
+    background-image: url('/img/e.jpg');
     border-radius: 20px;
     
 }
 .slide6{
-    background-image: url('../src/assets/img/f.jpg');
+    background-image: url('/img/f.jpg');
     border-radius: 20px;
 }
