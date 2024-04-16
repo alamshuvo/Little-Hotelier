@@ -3,14 +3,19 @@ import {  createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAnd
 import auth from "../../Firebase/firebase.config";
 export const AuthContext=createContext(null);
 import { GoogleAuthProvider } from "firebase/auth";
+import { GithubAuthProvider } from "firebase/auth";
+
+
 
 
 
 const AuthProvider = ({children}) => {
     const provider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
     const [user,setUser]=useState(null);
     const [loading,setLoading]=useState(true);
     const [error,setError]=useState(true);
+    
     console.log(loading,error);
     // create user 
     const registerUser=(email,password)=>{
@@ -56,7 +61,13 @@ const updateTotalProfile=(name,img)=>{
 
     return  signInWithPopup(auth,provider)
  }
- 
+//  github provider 
+
+const gitHubRegister=()=>{
+    signInWithPopup(auth, githubProvider)
+}
+
+
 
 //  signout
 const signOutproile=()=>{
@@ -94,7 +105,8 @@ const signOutproile=()=>{
         loading,
         updateProfileUser,
         error,
-        updateTotalProfile
+        updateTotalProfile,
+        gitHubRegister
     }
     return (
         <div>

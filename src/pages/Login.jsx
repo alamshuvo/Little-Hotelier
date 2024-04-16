@@ -12,7 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const {loginUser,googleRegister, error}=useContext(AuthContext);
+  const {loginUser,googleRegister, error,gitHubRegister}=useContext(AuthContext);
   const navigate=useNavigate();
   const location=useLocation();
   const from =location?.state || "/"
@@ -54,6 +54,19 @@ const Login = () => {
         }
     });
   };
+
+  const handleGithubRegister=()=>{
+    gitHubRegister().then((res) => {
+      if (!error) {
+        toast.success("User Login sucessfully ")
+        
+      }
+        if (res.user) {
+         
+            navigate(from);
+        }
+    });
+  }
  
 
   return (
@@ -127,7 +140,8 @@ const Login = () => {
             </button>
           </div>
           <div>
-            <button className="btn bg-blue-200">
+            <button className="btn bg-blue-200"
+            onClick={()=>handleGithubRegister()}>
               {" "}
               <FaGithub className="text-3xl" />
             </button>
