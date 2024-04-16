@@ -64,7 +64,9 @@ const updateTotalProfile=(name,img)=>{
 //  github provider 
 
 const gitHubRegister=()=>{
-    signInWithPopup(auth, githubProvider)
+    setError(true)
+    setLoading(true)
+   return signInWithPopup(auth, githubProvider)
 }
 
 

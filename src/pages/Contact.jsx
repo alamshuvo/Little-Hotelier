@@ -14,7 +14,7 @@ const Contact = () => {
               Let's talk!
             </h2>
             <div className="text-gray-600">
-              Vivamus in nisl metus? Phasellus.
+              Please Contact Our support Team 
             </div>
           </div>
           <img

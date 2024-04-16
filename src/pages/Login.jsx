@@ -61,7 +61,8 @@ const Login = () => {
   };
 
   const handleGithubRegister=()=>{
-    gitHubRegister().then((res) => {
+    gitHubRegister()
+    .then((res) => {
       if (!error) {
         toast.success("User Login sucessfully ")
         

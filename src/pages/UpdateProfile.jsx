@@ -1,15 +1,18 @@
 
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import { AuthContext } from "../components/authProvider/AuthProvider";
-import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import 'animate.css';
+import { useLocation, useNavigate } from "react-router-dom";
+
 
 const UpdateProfile = () => {
     // const {updateProfileUser}=useContext(AuthContext);
-    const { registerUser,updateTotalProfile,error} = useContext(AuthContext);
+    const { updateTotalProfile} = useContext(AuthContext);
+    const navigate=useNavigate()
+    const location=useLocation()
+    const from =location?.state || "/"
 
 
     const handleUpdateProfile=(e)=>{
@@ -20,6 +23,7 @@ const UpdateProfile = () => {
         .then(() => {
             // Profile updated!
             // console.log("profile updated finally");
+            navigate(from)
             console.log(name,photo);
             // ...
           }).catch((error) => {
@@ -56,9 +60,9 @@ const UpdateProfile = () => {
             placeholder="Photo URL "
           />
         </div>
-        <div>
-           <Link to={"/profile"}> <button  className="btn w-full mt-5 bg-blue-200 hover:bg-green-600 hover:text-white">Save Change</button></Link>
-           {/* <button className="btn">kk</button> */}
+        <div className="mt-5">
+           {/* <Link to={"/profile"}> <button  className="btn w-full mt-5 bg-blue-200 hover:bg-green-600 hover:text-white">Save Change</button></Link> */}
+           <button className="btn w-full mt-5 bg-blue-200 hover:bg-green-600 hover:text-white">Save Change</button>
         </div>
         </form>
       </div>

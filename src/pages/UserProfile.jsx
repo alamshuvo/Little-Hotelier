@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../components/authProvider/AuthProvider";
 import { Link } from "react-router-dom";
 import 'animate.css';
+import { useContext } from "react";
 
 const UserProfile = () => {
   const { user } = useContext(AuthContext);

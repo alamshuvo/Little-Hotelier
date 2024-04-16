@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import Navbar from '../components/navbar/Navbar';
+
 import Slider from '../components/slider/Slider';
 import Estates from '../components/Estates/Estates';
 import EstateTitle from '../components/EstateTitle/EstateTitle';
@@ -12,7 +12,7 @@ const Home = () => {
             </Helmet>
           
            <div>
-           <Navbar></Navbar>
+           {/* <Navbar></Navbar> */}
            
            </div>
           <div className=''>
