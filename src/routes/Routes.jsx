@@ -14,8 +14,8 @@ import UserProfile from "../pages/UserProfile";
 const router = createBrowserRouter([
     {
       path: "/",
-      errorElement:<ErrorPage></ErrorPage>,
       element: <Root></Root>,
+      errorElement:<ErrorPage></ErrorPage>,
       children:[
         {
             path:"/",
@@ -61,6 +61,9 @@ const router = createBrowserRouter([
         }
 
      ]
+
     },
+   
+    
   ]);
   export default router;

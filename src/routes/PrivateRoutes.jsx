@@ -10,16 +10,13 @@ const PrivateRoutes = ({children}) => {
         return <div className="justify-center items-center flex"><span className="loading loading-infinity loading-lg"></span></div>
     }
     if (!user) {
-        return <Navigate to={"/login"} state={location?.pathname || "/"}></Navigate>
+        console.log(user);
+        <Navigate to={"/login"} state={location?.pathname || "/"}></Navigate>
+       
+      
     }
-    // if ( !user) {
-    //     re
-    // }
-    return (
-        <div>
-           {children}
-        </div>
-    );
+    
+    return   children; 
 };
 
 export default PrivateRoutes;
