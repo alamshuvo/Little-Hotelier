@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "../layouts/Root";
 import Home from "../pages/Home";
 import ErrorPage from "../pages/ErrorPage";
-
 import Contact from "../pages/Contact";
 import ViewProperty from "../pages/ViewProperty";
 import Login from "../pages/Login";
@@ -14,11 +13,12 @@ import UserProfile from "../pages/UserProfile";
 const router = createBrowserRouter([
     {
       path: "/",
-      element: <Root></Root>,
       errorElement:<ErrorPage></ErrorPage>,
+      element: <Root></Root>,
+      
       children:[
         {
-            path:"/",
+            index:true,
             element:<Home></Home>,
             loader:()=> fetch("/data.json")
         },
@@ -49,7 +49,9 @@ const router = createBrowserRouter([
         },
         {
             path:"/update",
-            element:<UpdateProfile></UpdateProfile>
+            element:<PrivateRoutes>
+                <UpdateProfile></UpdateProfile>
+            </PrivateRoutes>
         },
         {
             path:"/profile",
@@ -63,6 +65,10 @@ const router = createBrowserRouter([
      ]
 
     },
+    // {
+    //     path:"*",
+    //     element:<ErrorPage></ErrorPage>
+    // }
    
     
   ]);
