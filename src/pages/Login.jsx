@@ -80,7 +80,7 @@ const Login = () => {
         <title>Little Hotelier | Login</title>
       </Helmet>
 
-      <div className="bg-green-200" data-aos="fade-down"
+      <div className="bg-[#FFD1E3]" data-aos="fade-down"
      data-aos-easing="linear"
      data-aos-duration="1500">
         <form
