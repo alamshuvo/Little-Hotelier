@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import 'animate.css';
 
@@ -39,7 +38,7 @@ const Estate = ({ item }) => {
             {item.status}
           </div>
           <div className="card-actions mt-5" data-aos="fade-down">
-            <Link to={`${item.id}`}>
+            <Link to={`test/${item.id}`}>
               <button className="btn bg-green-400 text-white hover:bg-blue-300">
                 View Property
               </button>

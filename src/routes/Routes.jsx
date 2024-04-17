@@ -13,12 +13,12 @@ import UserProfile from "../pages/UserProfile";
 const router = createBrowserRouter([
     {
       path: "/",
-      errorElement:<ErrorPage></ErrorPage>,
       element: <Root></Root>,
-      
+      errorElement:<ErrorPage></ErrorPage>,
       children:[
         {
-            index:true,
+            // index:true,
+            path:"/",
             element:<Home></Home>,
             loader:()=> fetch("/data.json")
         },
@@ -27,12 +27,10 @@ const router = createBrowserRouter([
             path:"/contact",
             element:<PrivateRoutes>
                       <Contact></Contact>
-            </PrivateRoutes>
-              
-            
+            </PrivateRoutes>    
         },
         {
-            path:"/:id",
+            path:"test/:id",
             element:<PrivateRoutes>
               <ViewProperty></ViewProperty>
             </PrivateRoutes>
