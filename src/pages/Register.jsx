@@ -36,7 +36,7 @@ const Register = () => {
     }
     registerUser(email, password)
     
-      .then((response) => {
+      .then(() => {
        
         if (!error) {
           toast.success("User Register  sucessfully ")

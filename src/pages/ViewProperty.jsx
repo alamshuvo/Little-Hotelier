@@ -11,7 +11,7 @@ const ViewProperty = () => {
         <title>Little Hotelier | Property {id}</title>
       </Helmet>
       <section>
-        <div className="bg-green-400 text-white">
+        <div className="bg-[#FFD1E3] text-[#7EA1FF]">
           <div className="container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-56 md:py-32 md:px-10 lg:px-32 dark:text-gray-50">
           <h1 className="md:text-5xl font-bold leading-none sm:text-6xl xl:max-w-3xl text-gray-50 mb-10">
               {details.segment_name}

@@ -5,7 +5,7 @@ import 'animate.css';
 const Estate = ({ item }) => {
   return (
     <div >
-      <div className="card p-2 md:p-5 bg-base-100 shadow-xl  cursor-pointer ">
+      <div className="card p-2 md:p-5 bg-[#FFD1E3] shadow-xl  cursor-pointer ">
         <div data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine"
@@ -20,7 +20,7 @@ const Estate = ({ item }) => {
         </div>
         <div className="card-body" data-aos="flip-left">
           <h2 className="card-title text-center animate__animated animate__wobble">{item.estate_title}</h2>
-          <h1 className="text-2xl font-bold text-green-400 mt-5">
+          <h1 className="text-2xl font-bold text-[#FFFAB7] mt-5">
             {" "}
             Our facilities
           </h1>
@@ -28,18 +28,18 @@ const Estate = ({ item }) => {
             {item.facilities
               .map((a, b) => (
                 <div key={b}>
-                  <div className="font-bold text-blue-300">{a}</div>
+                  <div className="font-bold text-[#7EA1FF]">{a}</div>
                 </div>
               ))
               .slice(0, 2)}
           </div>
-          <div className="font-bold text-blue-300 flex justify-center items-center mt-5 ">
+          <div className="font-bold text-[#7EA1FF] flex justify-center items-center mt-5 ">
             <p>Status</p>
             {item.status}
           </div>
           <div className="card-actions mt-5" data-aos="fade-down">
             <Link to={`test/${item.id}`}>
-              <button className="btn bg-green-400 text-white hover:bg-blue-300">
+              <button className="btn text-[#FFFAB7] bg-[#5BBCFF] hover:bg-blue-300">
                 View Property
               </button>
             </Link>

@@ -12,7 +12,7 @@ const MeetOurAgents = () => {
         <AgentsDetails></AgentsDetails>
       </div>
       <div className="mt-16">
-        <section className="py-6 bg-gray-100  text-gray-800">
+        <section className="py-6 bg-fuchsia-200  text-gray-800">
           <div className="container p-4 mx-auto space-y-16 sm:p-10">
             <div className="space-y-4">
               

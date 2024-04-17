@@ -38,7 +38,7 @@ const UpdateProfile = () => {
       
     }
   return (
-    <div className="min-h-screen  justify-center items-center flex bg-green-200 flex-col space-y-5">
+    <div className="min-h-screen  justify-center items-center flex bg-[#FFD1E3] text-[#7EA1FF] flex-col space-y-5">
       <Helmet>
         <title>Little Hotelier | Update Profile</title>
       </Helmet>

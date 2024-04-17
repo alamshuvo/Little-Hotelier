@@ -26,7 +26,7 @@ const WhyChoceUs = () => {
             </p>
             <div className="card-actions ">
               <Link to={"/contact"}>
-                <button className="btn bg-green-300">Contact Us</button>
+                <button className="btn  text-[#FFFAB7] bg-[#5BBCFF] hover:bg-blue-300">Contact Us</button>
               </Link>
             </div>
           </div>
@@ -44,7 +44,7 @@ const WhyChoceUs = () => {
             </p>
             <div className="card-actions ">
               <Link to={"/contact"}>
-                <button className="btn bg-green-300">Contact Us</button>
+                <button className="btn  text-[#FFFAB7] bg-[#5BBCFF] hover:bg-blue-300">Contact Us</button>
               </Link>
             </div>
           </div>
@@ -59,7 +59,7 @@ const WhyChoceUs = () => {
             </p>
             <div className="card-actions ">
               <Link to={"/contact"}>
-                <button className="btn bg-green-300">Contact Us</button>
+                <button className="btn  text-[#FFFAB7] bg-[#5BBCFF] hover:bg-blue-300">Contact Us</button>
               </Link>
             </div>
           </div>
@@ -74,7 +74,7 @@ const WhyChoceUs = () => {
             </p>
             <div className="card-actions ">
               <Link to={"/contact"}>
-                <button className="btn bg-green-300">Contact Us</button>
+                <button className="btn  text-[#FFFAB7] bg-[#5BBCFF] hover:bg-blue-300">Contact Us</button>
               </Link>
             </div>
           </div>
@@ -89,7 +89,7 @@ const WhyChoceUs = () => {
             </p>
             <div className="card-actions ">
               <Link to={"/contact"}>
-                <button className="btn bg-green-300">Contact Us</button>
+                <button className="btn  text-[#FFFAB7] bg-[#5BBCFF] hover:bg-blue-300">Contact Us</button>
               </Link>
             </div>
           </div>
@@ -104,7 +104,7 @@ const WhyChoceUs = () => {
             </p>
             <div className="card-actions ">
               <Link to={"/contact"}>
-                <button className="btn bg-green-300">Contact Us</button>
+                <button className="btn  text-[#FFFAB7] bg-[#5BBCFF] hover:bg-blue-300">Contact Us</button>
               </Link>
             </div>
           </div>

@@ -15,9 +15,9 @@ const Slider = () => {
       pagination={{ clickable: true }}
       modules={[Navigation, Autoplay, Pagination]}
       loop={true}
-      autoplay={{ delay: 2000 }}
+      autoplay={{ delay: 4000 }}
     >
-      <div className="min-h-screen ">
+      <div className="md:min-h-screen min-h-[400px] ">
         <SwiperSlide>
           <div className="slide slide1  flex justify-center items-center flex-col space-y-5" >
             <h1 className="text-white font-black text-2xl md:text-4xl text-center animate__animated animate__heartBeat">

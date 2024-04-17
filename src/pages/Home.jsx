@@ -20,16 +20,16 @@ const Home = () => {
           <div className=''>
           <Slider></Slider>
           </div>
-          <div className='mt-10' >
+          <div className='mt-10 container mx-auto' >
             <EstateTitle></EstateTitle>
           </div>
-          <div className='mt-10'>
+          <div className='mt-10 container mx-auto'>
             <Estates></Estates>
           </div>
-          <div className='mt-10 space-y-10'>
+          <div className='mt-10 space-y-10 container mx-auto'>
             <WhyChoceUs></WhyChoceUs>
           </div>
-          <div>
+          <div className='mt-10 container mx-auto'>
             <MeetOurAgents></MeetOurAgents>
           </div>
         </div>

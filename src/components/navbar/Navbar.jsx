@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
+
 import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = () => {
@@ -78,7 +79,7 @@ const Navbar = () => {
       <span className="loading loading-infinity loading-lg"></span>
     </div>
   ) : (
-    <div className="navbar bg-blue-300  rounded-lg sticky top-0 ">
+    <div className="navbar bg-blue-300    ">
       <div className="navbar-start ">
         <div className="dropdown ">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -108,7 +109,7 @@ const Navbar = () => {
                   {" "}
                   <button
                     onClick={handleSignOut}
-                    className="btn mr-3 bg-green-400 text-white hover:outline-1 "
+                    className="btn mr-3  text-[#FFFAB7] bg-[#5BBCFF] hover:bg-blue-300 hover:outline-1 "
                   >
                     LogOut
                   </button>
@@ -118,7 +119,7 @@ const Navbar = () => {
               <div className="md:flex  ">
                 <Link to={"/login"}>
                   {" "}
-                  <button className="btn  bg-green-400 text-white hover:outline-1 ">
+                  <button className="btn  text-[#FFFAB7] bg-[#5BBCFF] hover:bg-blue-300 hover:outline-1 ">
                     Login
                   </button>
                 </Link>
@@ -128,7 +129,7 @@ const Navbar = () => {
         </div>
         <Link to={"/"}>
           {" "}
-          <button className="btn  btn-ghost md:text-xl flex ">
+          <button className="btn  btn-ghost md:text-xl flex  ">
             Little
             <span className="text-green-500 font-black md:text-3xl">
               Hotelier
