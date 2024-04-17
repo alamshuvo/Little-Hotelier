@@ -26,14 +26,17 @@ const router = createBrowserRouter([
         {
             path:"/contact",
             element:<PrivateRoutes>
-                <Contact></Contact>
+                      <Contact></Contact>
             </PrivateRoutes>
+              
+            
         },
         {
             path:"/:id",
             element:<PrivateRoutes>
-                <ViewProperty></ViewProperty>
-            </PrivateRoutes>,
+              <ViewProperty></ViewProperty>
+            </PrivateRoutes>
+            ,
             loader:()=>fetch("/data.json")
         },
         {
@@ -51,8 +54,10 @@ const router = createBrowserRouter([
         {
             path:"/profile",
             element:<PrivateRoutes>
-                <UserProfile></UserProfile>
+                 <UserProfile></UserProfile>
             </PrivateRoutes>
+               
+            
         }
 
      ]
