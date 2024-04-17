@@ -5,7 +5,6 @@ const ViewProperty = () => {
   const data = useLoaderData();
   const { id } = useParams();
   const details = data.find((item) => item.id == id);
-  console.log(data, details);
   return (
     <div>
       <Helmet>

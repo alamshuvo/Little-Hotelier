@@ -16,7 +16,6 @@ const AuthProvider = ({children}) => {
     const [loading,setLoading]=useState(true);
     const [error,setError]=useState(true);
     
-    console.log(loading,error);
     // create user 
     const registerUser=(email,password)=>{
         setLoading(true);
@@ -32,7 +31,6 @@ const updateProfileUser=(name,img)=>{
         photoURL: img,
       }).then(() => {
         // Profile updated!
-        console.log("profile updated");
         // ...
       }).catch((error) => {
         // An error occurred

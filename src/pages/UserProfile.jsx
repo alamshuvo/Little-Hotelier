@@ -7,7 +7,6 @@ import { useContext } from "react";
 
 const UserProfile = () => {
   const { user } = useContext(AuthContext);
-  console.log(user);
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">
       <Helmet>

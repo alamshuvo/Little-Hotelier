@@ -23,20 +23,17 @@ const UpdateProfile = () => {
         const photo=e.target.photo.value;
         updateTotalProfile(name,photo)
         .then(() => {
-            // Profile updated!
-            // console.log("profile updated finally");
-          // if (res.user) {
+          
              
             navigate(from)
             window.location.reload()
-            // console.log(res);
+          
           
            
-            console.log(name,photo);
-            // ...
+          
+          
           }).catch((error) => {
-            // An error occurred
-            // ...
+            
           });
       
     }
